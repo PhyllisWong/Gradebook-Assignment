@@ -36,3 +36,21 @@ class Classroom():
         action = str(input)
         if action == 'create':
             print('What is the name of the assignment?')
+            assignment_name = input()
+            self.list_of_assignments.append(assignment_name)
+        if action == 'delete':
+            assignment_name = input()
+            if assignment_name not in self.list_of_assignments:
+                print('The assignment you are trying to delete does not exist')
+                return
+            else:
+                del self.list_of_assignments[assignment_name]
+        if action == 'edit':
+            print('Which assignment are you trying to edit?')
+            original_assignment = input()
+            edited_assignment = input()
+            if original_assignment not in self.list_of_assignments:
+                print('Sorry you can not edit an assignment that does not exist!')
+                return
+            else:
+                self.list_of_assignments[original_assignment] = edited_assignment
