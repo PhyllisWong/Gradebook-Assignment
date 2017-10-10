@@ -15,7 +15,8 @@ class Classroom():
 
     def times_courses_meet(self):
         # This is essentially the function that will determine when the courses meet
-        print('This course meets %s every Monday, Tuesday, and Friday' %(time.strftime('%H:%M:%S')))
+        course_times = 'This course meets %s every Monday, Tuesday, and Friday' %(time.strftime('%H:%M:%S'))
+        return(course_times)
 
     def create_course_id(self):
         # This is essentially the function that will give the course a course id
@@ -37,7 +38,8 @@ class Classroom():
         if action == 'create':
             print('What is the name of the assignment?')
             assignment_name = input()
-            self.list_of_assignments.append(assignment_name)
+            course_assignemnts = self.list_of_assignments.append(assignment_name)
+            return(course_assignemnts)
         if action == 'delete':
             assignment_name = input()
             if assignment_name not in self.list_of_assignments:
@@ -53,4 +55,5 @@ class Classroom():
                 print('Sorry you can not edit an assignment that does not exist!')
                 return
             else:
-                self.list_of_assignments[original_assignment] = edited_assignment
+                new_assignment_name = self.list_of_assignments[original_assignment] = edited_assignment
+                return(new_assignment_name)
