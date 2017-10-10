@@ -29,7 +29,9 @@ class Classroom():
         # The keys will be the random course while the values
         # are the students that populate the course
 
-        # roster_dictionary = {random_course: }
+
+        # for course in possible_courses:
+        #     roster_dictionary = {course: 'students'}
         pass
 
     def assignments(self):
