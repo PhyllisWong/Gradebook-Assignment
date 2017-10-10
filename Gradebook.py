@@ -3,10 +3,12 @@ import datetime
 import time
 import uuid
 
-class Class():
+class Classroom():
     # This is going to be the class function
     possible_courses = ['Mathematics', 'Science', 'English', 'Economics', 'Social Studies', 'Geology']
-    random_course = random.choice(self.possible_courses)
+    random_course = random.choice(possible_courses)
+    list_of_assignments = []
+
     def courses(self):
         # This assigns the courses to the
         print('Hello new student this is %s' %(random_course))
@@ -25,4 +27,12 @@ class Class():
         # This is essentially the roster for the course that is chosen
         # The keys will be the random course while the values
         # are the students that populate the course
-        roster_dictionary = {random_course: }
+
+        # roster_dictionary = {random_course: }
+        pass
+
+    def assignments(self):
+        # Handles the assignment functionality such as assigning updating and deleting
+        action = str(input)
+        if action == 'create':
+            print('What is the name of the assignment?')
